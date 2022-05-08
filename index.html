@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid button</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="button">
+        <div class="icon">
+            <div class="blurred">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </button>
+    <svg display="none" version="1.1"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <filter id="liquid">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="name"/>
+                <feColorMatrix in="name"
+                    mode="matrix"
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 30 -15"
+                    result="aab"/>
+                <feBlend  in="SourceGraphic" in2="aab"/>
+            </filter>
+        </defs>
+    </svg>
+</body>
+</html>
