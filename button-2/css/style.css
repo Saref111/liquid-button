@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+.button {
+    border: 3px solid black;
+    background-color: white;
+    width: 150px;
+    min-height: 50px;
+    display: flex;
+    justify-content: stretch;
+    padding: 0;
+    margin: 0;
+    position: relative;
+} 
+
+.button span {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    position: relative;
+    background-color: #fff;
+}
+
+.button figure {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: solid 3px black;
+    transition-property: width, height, top, left;
+    transition-duration: 0.2s;
+    transition-delay: 0ms;
+    z-index: 1;
+}
+
+.button:hover figure {
+    transition-duration: 0.5s;
+}
+
+.button:hover figure:nth-of-type(1) {
+    top: -5px;
+    left: 10px;
+    transition-delay: 0.2s;
+}
+.button:hover figure:nth-of-type(2) {
+    top: 40px;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+    transition-delay: 0.3s;
+}
+.button:hover figure:nth-of-type(3) {
+    top: 50px;
+    left: 110px;
+    width: 58px;
+    height: 58px;
+    transition-delay: 0.4s;
+}
